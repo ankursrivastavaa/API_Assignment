@@ -118,6 +118,8 @@ namespace API_Assignment.Controllers
         }
 
 
+
+
         public Previous GetPrevious(string symbols)
         {
             ///stock/{symbol}/previous
@@ -174,6 +176,11 @@ namespace API_Assignment.Controllers
                 market.GetRange(0, 3);
             }
             return market;
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
         }
 
         public IActionResult Market(string symbols)
