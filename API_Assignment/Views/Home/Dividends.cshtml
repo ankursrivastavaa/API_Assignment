@@ -1,0 +1,47 @@
+﻿@model IEnumerable<API_Assignment.Models.Dividends>
+
+@{
+    ViewData["Title"] = "Dividends";
+}
+
+<h1>Dividends</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pay_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rec_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dividends_type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pay_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rec_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dividends_type)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
