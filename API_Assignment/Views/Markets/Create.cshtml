@@ -1,0 +1,55 @@
+﻿@model API_Assignment.Models.Market
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Market</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="venue_name" class="control-label"></label>
+                <input asp-for="venue_name" class="form-control" />
+                <span asp-validation-for="venue_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="volume" class="control-label"></label>
+                <input asp-for="volume" class="form-control" />
+                <span asp-validation-for="volume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tapeA" class="control-label"></label>
+                <input asp-for="tapeA" class="form-control" />
+                <span asp-validation-for="tapeA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tapeB" class="control-label"></label>
+                <input asp-for="tapeB" class="form-control" />
+                <span asp-validation-for="tapeB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tapeC" class="control-label"></label>
+                <input asp-for="tapeC" class="form-control" />
+                <span asp-validation-for="tapeC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="market_percent" class="control-label"></label>
+                <input asp-for="market_percent" class="form-control" />
+                <span asp-validation-for="market_percent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,54 @@
+﻿@model API_Assignment.Models.Market
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Market</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.venue_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.venue_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.volume)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.volume)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tapeA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tapeA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tapeB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tapeB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tapeC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tapeC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.market_percent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.market_percent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.mic">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

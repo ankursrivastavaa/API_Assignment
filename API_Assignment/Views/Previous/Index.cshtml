@@ -1,0 +1,59 @@
+﻿@model IEnumerable<API_Assignment.Models.Previous>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.datetime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.open)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.high)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.low)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.close)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.datetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.open)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.high)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.low)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.close)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.symbol">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.symbol">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.symbol">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

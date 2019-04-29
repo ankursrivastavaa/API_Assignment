@@ -1,0 +1,53 @@
+﻿@model IEnumerable<API_Assignment.Models.Dividends>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pay_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rec_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dividends_type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pay_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rec_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dividends_type)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Exe_date">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Exe_date">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Exe_date">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model API_Assignment.Models.Previous
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Previous</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datetime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datetime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.open)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.open)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.high)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.high)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.low)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.low)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.close)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.close)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.symbol">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<API_Assignment.Models.Market>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.venue_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.volume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tapeA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tapeB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tapeC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.market_percent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.venue_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tapeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tapeB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tapeC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.market_percent)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.mic">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.mic">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.mic">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

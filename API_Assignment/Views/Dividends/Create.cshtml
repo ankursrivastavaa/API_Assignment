@@ -1,0 +1,50 @@
+﻿@model API_Assignment.Models.Dividends
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Dividends</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Exe_date" class="control-label"></label>
+                <input asp-for="Exe_date" class="form-control" />
+                <span asp-validation-for="Exe_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pay_date" class="control-label"></label>
+                <input asp-for="Pay_date" class="form-control" />
+                <span asp-validation-for="Pay_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rec_date" class="control-label"></label>
+                <input asp-for="Rec_date" class="form-control" />
+                <span asp-validation-for="Rec_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dividends_type" class="control-label"></label>
+                <input asp-for="Dividends_type" class="form-control" />
+                <span asp-validation-for="Dividends_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
